@@ -1,9 +1,13 @@
 #!/bin/bash
 # config
-DMENU="dmenu -b -l 20"
+
+# Case insensitive, 10 results
+DMENU="dmenu -i -l 10 -p Bookmark:"
 BOOKMARK_FILE="$HOME/.config/google-chrome/Default/Bookmarks"
 HISTORY_FILE="$HOME/.config/google-chrome/Default/History"
-CHROME_BIN="google-chrome-stable"
+
+# Try to open in new window; if this doesn't work well, remove --new-window
+CHROME_BIN="google-chrome-stable --new-window"
 PYTHON_BIN="python3"
 PREFIXES=(
     "g https://www.google.com/search?q= https://www.google.com/"
