@@ -6,8 +6,13 @@ DMENU="dmenu -i -l 10 -p Bookmark:"
 BOOKMARK_FILE="$HOME/.config/google-chrome/Default/Bookmarks"
 HISTORY_FILE="$HOME/.config/google-chrome/Default/History"
 
-# Try to open in new window; if this doesn't work well, remove --new-window
-CHROME_BIN="google-chrome-stable --new-window"
+# TODO: detect if there is a currently visible Chrome window
+#       If yes - open it as a new tab
+#       If not - open it as --new-window on current tag
+#       Meanwhile, make opening in new tab (even on different tag) a default 
+#             because having to always switch to browser tag is still less irritating than 
+#             consolidating always separate tabs
+CHROME_BIN="google-chrome-stable"
 PYTHON_BIN="python3"
 PREFIXES=(
     "g https://www.google.com/search?q= https://www.google.com/"
